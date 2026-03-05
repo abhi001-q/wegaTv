@@ -3,12 +3,12 @@ import logo from "../assets/logo_1.png";
 import HeaderItem from "./HeaderItem";
 import {
   HiHome,
-  HiOutlineSearch,
+  HiMagnifyingGlass,
   HiStar,
   HiPlayCircle,
-  HiTv
-} from "react-icons/hi";
-import { HiPlus, HiDotVertivcal } from "react-icons/hi";
+  HiTv,
+} from "react-icons/hi2";
+import { HiPlus } from "react-icons/hi";
 
 function Header() {
   const navItems = [
@@ -18,7 +18,7 @@ function Header() {
     },
     {
       name: "SEARCH",
-      icon: HiOutlineSearch,
+      icon: HiMagnifyingGlass,
     },
     {
       name: "WATCH LIST",
@@ -32,14 +32,14 @@ function Header() {
     {
       name: "SERIES",
       icon: HiTv,
-    }
+    },
   ];
   return (
     <div>
       <img className=" w-20 md:w-30  object-cover" src={logo} alt="Logo" />
 
       {navItems.map((item) => (
-      <HeaderItem name={(item.name)} Icon={(item.icon)} />
+        <HeaderItem name={item.name} Icon={item.icon} />
       ))}
     </div>
   );
