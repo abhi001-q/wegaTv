@@ -35,12 +35,19 @@ function Header() {
     },
   ];
   return (
-    <div>
-      <img className=" w-20 md:w-30  object-cover" src={logo} alt="Logo" />
+    <div className="flex items-center  justify-between p-5">
+      <div  className="flex items-center gap-8">
+        <img className=" w-20 md:w-30  object-cover" src={logo} alt="Logo" />
 
-      {navItems.map((item) => (
-        <HeaderItem name={item.name} Icon={item.icon} />
-      ))}
+        {navItems.map((item) => (
+          <HeaderItem name={item.name} Icon={item.icon} />
+        ))}
+      </div>
+      <img
+        className="w-12.5 rounded-full"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFfHFYAIt_r3AZQoNa-GwPlUpCkcBZ8kFaZA&s"
+        alt="profile"
+      />
     </div>
   );
 }
