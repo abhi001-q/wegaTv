@@ -1,0 +1,1 @@
+A WegaTV OTT platform designed for streaming movies, TV shows, and web series with a modern user interface and smooth user experience.
