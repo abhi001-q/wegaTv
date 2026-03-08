@@ -37,18 +37,18 @@ function Header() {
     },
   ];
   return (
-    <div className="flex items-center justify-between p-5 sticky top-0 z-50 bg-black/80 backdrop-blur-sm">
+    <div className="flex items-center  justify-between p-5">
       <div className="flex items-center gap-8">
         <img className=" w-20 md:w-30  object-cover" src={logo} alt="Logo" />
         <div className="hidden   md:flex gap-8">
-          {navItems.map((item, index) => (
-            <HeaderItem key={index} name={item.name} Icon={item.icon} />
+          {navItems.map((item) => (
+            <HeaderItem name={item.name} Icon={item.icon} />
           ))}
         </div>
         <div className="flex md:hidden gap-5">
           {navItems.map(
             (item, index) =>
-              index < 3 && <HeaderItem key={index} name={""} Icon={item.icon} />,
+              index < 3 && <HeaderItem name={""} Icon={item.icon} />,
           )}
           <div className="md:hidden" onClick={() => settoggle(!toggle)}>
             <HeaderItem name={""} Icon={HiDotsVertical} />
@@ -57,7 +57,7 @@ function Header() {
                 {navItems.map(
                   (item, index) =>
                     index > 2 && (
-                      <HeaderItem key={index} name={item.name} Icon={item.icon} />
+                      <HeaderItem name={item.name} Icon={item.icon} />
                     ),
                 )}
               </div>
