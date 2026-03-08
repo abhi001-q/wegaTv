@@ -2,14 +2,14 @@ import React, { useEffect } from 'react'
 import globalApi from '../../services/globalApi';
 
 function Slider() {
-
+    const [movieList,setmovieList]=useState([]);
     useEffect(()=>{
         getTrendingMovies();
     },[])
 
     const getTrendingMovies=()=>{
         globalApi.getTrendingVideos.then(resp=>{
-            console.log(resp);
+            setmovieList(resp.data.results);
         })
     }
   return (
